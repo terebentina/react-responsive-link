@@ -4,7 +4,7 @@
   "description": "A ReactJS link component that responds to touch without delay (and more native-like behaviour)",
   "main": "lib/index.js",
   "scripts": {
-    "build": "webpack --progress --colors --config webpack.config.build.js",
+    "build": "webpack --progress --colors --config webpack.config.js",
     "test": "tape -r babel-core/register tests/spec.js"
   },
   "author": "Dan Caragea dancaragea@gmail.com",
