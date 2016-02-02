@@ -82,3 +82,9 @@ class MyComponent extends React.Component {
 }
 
 ```
+
+## License
+
+[The MIT License](./LICENSE)
+
+Copyright (c) 2016 Dan Caragea
