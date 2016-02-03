@@ -5,6 +5,8 @@ A link component that:
 - doesn't have the tap delay on mobile (even if the zoom is not fixed).
 - if you need to scroll the page and happen to grab a link when you start swiping, the action of the link will not be triggered (just as it is expected on mobile).
 - same if you want to pinch zoom the page.
+- it is not either tap or click. That is, you can use it on a hibrid device that has both touch and mouse and it'll react appropriately to clicks and taps.
+
 
 ## Installation
 
