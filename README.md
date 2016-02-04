@@ -15,13 +15,13 @@ Hopefully soon no browser will need this trick.
 ## Installation
 
 ```
-npm i react-responsive-link -S
+npm i @terebentina/react-responsive-link -S
 ```
 
 ## Usage
 
 ```javascript
-var Link = require('react-responsive-link');
+var Link = require('@terebentina/react-responsive-link');
 
 <Link onClickTap={this.doSomething}>click or tap me</Link>
 ```
@@ -30,7 +30,7 @@ The more complete example below is using ES6 and the class syntax but, obviously
 
 ```javascript
 import React from 'react';
-import Link from 'react-responsive-link';
+import Link from '@terebentina/react-responsive-link';
 
 class MyComponent extends React.Component {
   doSomething(e) {
@@ -62,7 +62,7 @@ Once you create that `history.js` module you can make use of it for your respons
 
 ```javascript
 import React from 'react';
-import Link from 'react-responsive-link';
+import Link from '@terebentina/react-responsive-link';
 import history from './history';
 
 class MyComponent extends React.Component {
