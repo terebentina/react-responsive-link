@@ -1,8 +1,8 @@
 {
   "name": "react-responsive-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A ReactJS link component that responds to touch without delay (and more native-like behaviour)",
-  "main": "lib/index.js",
+  "main": "lib/ReactResponsiveLink.js",
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.js",
     "test": "tape -r babel-core/register tests/spec.js"
