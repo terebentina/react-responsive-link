@@ -36,7 +36,7 @@ class ReactResponsiveLink extends React.Component {
 
 	onTouchStart(e) {
 		// this is what prevents click events from happening. Doing the same from touchend doesn't work!!!
-		e.preventDefault();
+		//e.preventDefault();
 		if (e.changedTouches[0] && e.changedTouches[0].clientX) {
 			this.touchPos = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
 		}
