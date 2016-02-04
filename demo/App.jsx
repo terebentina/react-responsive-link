@@ -27,10 +27,13 @@ class App extends React.Component {
 	onClick(e) {
 		e.preventDefault();
 		this.refs.write.textContent = `The A tag was clicked with a response time of ${Date.now() - this.startClick2}ms`;
+		this.refs.main.style.backgroundColor = '#f00';
+		setTimeout(() => this.refs.main.style.backgroundColor = '#fff', 100);
 	}
 
 	startTap = 0;
 	startClick = 0;
+	startClick2 = 0;
 
 	render() {
 		return (

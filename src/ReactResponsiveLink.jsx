@@ -1,6 +1,5 @@
 import React from 'react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
-//import history from '../history';
 
 const swipePX = 30;
 
@@ -70,7 +69,7 @@ class ReactResponsiveLink extends React.Component {
 
 		if (onTouchStart) {
 			props.onTouchStart = (e) => {
-				this.onTouchStart.bind(this, e);
+				this.onTouchStart.call(this, e);
 				onTouchStart(e);
 			};
 		} else {
