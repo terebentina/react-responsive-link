@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Link from '../src/ReactResponsiveLink.jsx';
+import Link from '../lib/index.js';
 
 class App extends React.Component {
 

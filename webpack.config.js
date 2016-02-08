@@ -8,26 +8,27 @@ module.exports = [
 		entry: path.resolve(__dirname, './src/ReactResponsiveLink.jsx'),
 		output: {
 			path: path.join(__dirname, 'lib'),
-			filename: 'ReactResponsiveLink.js',
+			filename: 'index.js',
 			publicPath: '/lib/',
+			library: 'ReactResponsiveLink',
+			libraryTarget: 'commonjs2',
 		},
 		module: {
-			loaders: [{
-				test: /\.jsx?$/,
-				loader: 'babel',
-				include: path.join(__dirname, 'src'),
-			},],
+			loaders: [
+				{ test: /\.jsx?$/, loader: 'babel', include: path.join(__dirname, 'src') },
+			],
 		},
 		externals: {
 			react: 'react',
 			'react-dom': 'react-dom',
 		},
 		target: 'web',
-		debug: true,
-		plugins: [new webpack.optimize.OccurenceOrderPlugin(), new webpack.NoErrorsPlugin(), new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify('production'),
-		}), //new webpack.optimize.DedupePlugin(),
-			//new webpack.optimize.UglifyJsPlugin(),
+		plugins: [
+			new webpack.optimize.OccurenceOrderPlugin(),
+			new webpack.NoErrorsPlugin(),
+			new webpack.DefinePlugin({
+				'process.env.NODE_ENV': JSON.stringify('production'),
+			}),
 		],
 	},
 	{
@@ -49,7 +50,6 @@ module.exports = [
 			extensions: ['', '.js', '.jsx'],
 		},
 		target: 'web',
-		debug: true,
 		plugins: [
 			new webpack.optimize.OccurenceOrderPlugin(),
 			new webpack.NoErrorsPlugin(),
@@ -58,7 +58,7 @@ module.exports = [
 			}),
 			//new webpack.optimize.DedupePlugin(),
 			new webpack.optimize.CommonsChunkPlugin(/* chunkName= */'vendor', /* filename= */'vendor.js'),
-			new webpack.optimize.UglifyJsPlugin(),
+			new webpack.optimize.UglifyJsPlugin({ compressor: { warnings: false } }),
 		],
 	},
 ];
